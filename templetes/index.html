@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registered Users</title>
+</head>
+<body>
+    <h1>Registered Users</h1>
+    <table>
+        <tr>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Orders</th>
+        </tr>
+        {% for user_id, user_data in users.items() %}
+        <tr>
+            <td>{{ user_id }}</td>
+            <td>{{ user_data["name"] }}</td>
+            <td>{{ user_data["contact"] }}</td>
+            <td>
+                <ul>
+                    {% for order in user_data["orders"] %}
+                    <li>Product: {{ order["product"] }}, Quantity: {{ order["quantity"] }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
