@@ -122,5 +122,4 @@ def keep_alive():
 
 # Run the bot
 keep_alive()
-token = os.environ['token']
-bot.run(token)
+bot.run("MTA5ODk5Mzc3ODA0NTUwNTU5Nw.GwaVSZ.mFOUmz6ZmMprlV4-zbMSaWPV7I8y6BFetwbbpI")
